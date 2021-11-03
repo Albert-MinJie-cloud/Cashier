@@ -1,0 +1,283 @@
+.card_recharge {
+  width: 100%;
+  height: 640px;
+}
+.card_recharge .content_right {
+  background: #ffffff;
+  width: 100%;
+  height: 100%;
+  float: right;
+}
+.card_recharge .content_right .card_recharge_type {
+  height: 24px;
+  line-height: 24px;
+  margin-top: 12px;
+  margin-left: 24px;
+  padding-left: 24px;
+  position: relative;
+}
+.card_recharge .content_right .card_recharge_type::after {
+  width: 12px;
+  height: 100%;
+  background: #1890ff;
+  position: absolute;
+  left: 0;
+  content: "";
+}
+.card_recharge .content_right .card_recharge {
+  width: 100%;
+  height: 40%;
+  padding: 12px 24px;
+}
+.card_recharge .content_right .card_recharge .card_recharge_ui {
+  width: 45%;
+  height: 100%;
+  padding: 24px;
+  position: relative;
+  float: left;
+  color: #000000;
+  border-radius: 12px;
+  background: rgba(51, 130, 233, 0.2);
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+  border-radius: 25px;
+  box-shadow: inset 0 0 6px rgba(255, 255, 255, 0.2);
+}
+.card_recharge .content_right .card_recharge .card_recharge_ui:hover {
+  box-shadow: 0 0 10px 10px rgba(209, 209, 209, 0.2);
+  transition: all 0.2s ease-in-out;
+}
+.card_recharge .content_right .card_recharge .card_recharge_ui .card_type {
+  font-weight: bold;
+  color: #000000;
+}
+.card_recharge .content_right .card_recharge .card_recharge_ui .card_balance {
+  margin-top: 24px;
+}
+.card_recharge .content_right .card_recharge .card_recharge_ui .card_discount_time {
+  position: absolute;
+  bottom: 24px;
+  left: 24px;
+}
+.card_recharge .content_right .card_recharge .card_recharge_ui .card_discount_time h4 {
+  font-weight: bold;
+}
+.card_recharge .content_right .card_recharge .card_recharge_ui .card_discount_time .card_discount_time_left {
+  float: left;
+  margin-right: 24px;
+}
+.card_recharge .content_right .card_recharge .card_recharge_ui .card_discount_time .card_discount_time_right {
+  float: left;
+}
+.card_recharge .content_right .card_recharge .card_recharge_ui .card_discount_time .card_discount_time_right::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.card_recharge .content_right .card_recharge .card_recharge_pay {
+  width: 40%;
+  height: 100%;
+  float: right;
+  padding: 24px;
+  background: #f4f6f891;
+  box-sizing: border-box;
+  display: flex;
+  align-content: space-between;
+  flex-wrap: wrap;
+}
+.card_recharge .content_right .card_recharge .card_recharge_pay::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.card_recharge .content_right .card_recharge .card_recharge_pay .card_recharge_validity_time {
+  height: 30px;
+  line-height: 30px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+.card_recharge .content_right .card_recharge .card_recharge_pay .card_recharge_validity_time .validity_time_left {
+  display: inline-block;
+  padding: 0 11px;
+  background: #0996ff;
+  border: #0996ff solid 1px;
+  color: white;
+}
+.card_recharge .content_right .card_recharge .card_recharge_pay .card_recharge_validity_time .validity_time_right {
+  flex: 1;
+}
+.card_recharge .content_right .card_recharge_method_title {
+  height: 24px;
+  line-height: 24px;
+  margin-left: 24px;
+  padding-left: 24px;
+  position: relative;
+}
+.card_recharge .content_right .card_recharge_method_title::after {
+  width: 12px;
+  height: 100%;
+  background: #1890ff;
+  position: absolute;
+  left: 0;
+  content: "";
+}
+.card_recharge .content_right .card_method {
+  width: 100%;
+  height: calc(60% - 72px);
+  padding: 24px;
+}
+.card_recharge .content_right .card_method .card_method_left {
+  width: 276px;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  float: left;
+  overflow: auto;
+  padding-right: 6px;
+  /* 支付方式的滚动条样式依次为 */
+}
+.card_recharge .content_right .card_method .card_method_left::-webkit-scrollbar {
+  width: 6px;
+  background-color: #f5f5f5;
+  border-radius: 3px;
+}
+.card_recharge .content_right .card_method .card_method_left::-webkit-scrollbar-thumb {
+  width: 6px;
+  background-color: #cbcbcb;
+  border-radius: 3px;
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+.card_recharge .content_right .card_method .card_method_left::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  border-radius: 12px;
+  background-color: #ebe9e9;
+}
+.card_recharge .content_right .card_method .card_method_left .pay_method_cash {
+  cursor: pointer;
+  width: 76px;
+  height: 76px;
+  border: 1px solid #cdcdcd;
+  border-radius: 6px;
+  display: flex;
+  position: relative;
+  margin-bottom: 12px;
+  margin-right: 12px;
+}
+.card_recharge .content_right .card_method .card_method_left .pay_method_cash div {
+  text-align: center;
+  margin: auto;
+}
+.card_recharge .content_right .card_method .card_method_left .pay_method_cash::before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  background-color: #cdcdcd;
+  border: inherit;
+  border-color: #000;
+  border-radius: inherit;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  content: " ";
+}
+.card_recharge .content_right .card_method .card_method_left .pay_method_cash:active::before {
+  opacity: 0.1;
+}
+.card_recharge .content_right .card_method .card_method_right {
+  width: calc(60% - 276px);
+  height: 100%;
+  float: left;
+  content: "";
+  padding-left: 42px;
+  padding-right: 24px;
+  box-sizing: border-box;
+  overflow: auto;
+  /* 支付方式的滚动条样式依次为 */
+}
+.card_recharge .content_right .card_method .card_method_right::-webkit-scrollbar {
+  width: 6px;
+  background-color: #f5f5f5;
+  border-radius: 3px;
+}
+.card_recharge .content_right .card_method .card_method_right::-webkit-scrollbar-thumb {
+  width: 6px;
+  background-color: #cbcbcb;
+  border-radius: 3px;
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+.card_recharge .content_right .card_method .card_method_right::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  border-radius: 12px;
+  background-color: #ebe9e9;
+}
+.card_recharge .content_right .card_method .card_method_right .pay_method_input {
+  height: 30px;
+  line-height: 30px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  margin-top: 6px;
+}
+.card_recharge .content_right .card_method .card_method_right .pay_method_input .pay_method_input_left {
+  display: inline-block;
+  padding: 0 11px;
+  background: #0996ff;
+  border: #0996ff solid 1px;
+  color: white;
+}
+.card_recharge .content_right .card_method .card_method_right .pay_method_input .pay_method_input_right {
+  flex: 1;
+}
+.card_recharge .content_right .card_method .card_method_right .pay_method_input .pay_method_input_delete {
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  border: 1px solid #cdcdcd;
+  border-left: none;
+  position: relative;
+  cursor: pointer;
+}
+.card_recharge .content_right .card_method .card_method_right .pay_method_input .pay_method_input_delete::after {
+  content: "";
+  display: inline-block;
+  height: 2px;
+  width: 50%;
+  background: #000000;
+  position: absolute;
+  left: 25%;
+  top: calc(50% - 1px);
+}
+.card_recharge .content_right .card_method .card_method_right .pay_method_input .pay_method_input_delete::before {
+  content: "";
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  background-color: #cdcdcd;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+}
+.card_recharge .content_right .card_method .card_method_right .pay_method_input .pay_method_input_delete:active::before {
+  opacity: 0.25;
+}
+.card_recharge .content_right .card_method .card_pay_btn {
+  width: 40%;
+  height: 100%;
+  float: left;
+  padding: 0 48px;
+}
+.card_recharge .content_right .card_method .card_pay_btn .card_pay_btn_waitting_paid {
+  font-weight: bold;
+  color: red;
+  margin-bottom: 96px;
+}
+.card_recharge .content_right .card_method .card_pay_btn .card_pay_btn_waitting_paid_ok {
+  font-weight: bold;
+  color: green;
+  margin-bottom: 96px;
+}

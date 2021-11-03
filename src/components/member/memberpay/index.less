@@ -1,0 +1,504 @@
+@boxshow: 0 0 20px 5px rgba(0, 0, 0, 0.1);
+@border-solid: 1px solid #d9d9d9;
+@border-solid-blue: 1px solid #1890ff;
+@border-dashed-blue: 1px dashed #1890ff;
+@border-dashed-grey: 1px dashed #d9d9d9;
+@border-dashed: 1px solid #d9d9d9;
+@active-color: #1890ff;
+@coupon-default-color: #a5d8ff; //卡券的颜色
+@coupon-active-color: #ced4da;
+
+.member_pay {
+  height: 626px;
+
+  .member_pay_left {
+    width: calc(30%);
+    height: 100%;
+    background: #f4f6f8;
+    padding: 6px;
+    float: left;
+
+    .member_pay_left_top {
+      padding: 12px;
+      background: #ffffff;
+      border-radius: 6px;
+
+      .pay_method_select {
+        height: 32px;
+        margin-bottom: 12px;
+        line-height: 32px;
+
+        ul {
+          list-style: none;
+          padding: 0;
+          margin: 0;
+          border-radius: 16px;
+          overflow: hidden;
+          background: #f1f3f5;
+          display: flex;
+
+          li {
+            cursor: pointer;
+            flex: 1;
+            text-align: center;
+          }
+
+          .li_active {
+            background: @active-color;
+            color: white;
+          }
+        }
+      }
+
+      .pay_method_input {
+        margin-bottom: 12px;
+        overflow: hidden;
+
+        .pay_method_input_left {
+          width: calc(60% - 6px);
+          float: left;
+          font-weight: lighter;
+          border-radius: 2px;
+        }
+
+        .pay_method_input_right {
+          width: calc(40% - 6px);
+          float: right;
+
+          &::before {
+            content: "";
+            display: block;
+            clear: both;
+          }
+        }
+      }
+    }
+
+    .member_pay_left_user {
+      background: #ffffff;
+      margin-top: 6px;
+      padding: 12px;
+      border-radius: 6px;
+
+      .pay_method_userInfo {
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        border-radius: 6px;
+        background: #f4f6f8;
+        padding: 12px;
+
+        .pay_method_userInfo_left {
+          margin-right: 12px;
+        }
+      }
+
+      .pay_method_userMoney {
+        margin-top: 12px;
+        overflow: hidden;
+        display: flex;
+        justify-content: space-between;
+        padding: 0 12px;
+        .pay_method_userMoney_left {
+          text-align: center;
+
+          div {
+            &:nth-last-child(1) {
+              color: #f88510;
+              font-weight: bold;
+            }
+          }
+        }
+
+        .pay_method_userMoney_right {
+          text-align: center;
+
+          div {
+            &:nth-last-child(1) {
+              color: #f88510;
+              font-weight: bold;
+            }
+          }
+        }
+      }
+
+      .pay_method_userCardList {
+        margin-bottom: 6px;
+
+        .pay_method_userCardList_item {
+          cursor: pointer;
+          padding: 0 12px;
+          height: 32px;
+          border-radius: 2px;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          position: relative;
+        }
+
+        .pay_method_userCardList_item_active {
+          cursor: pointer;
+          padding: 0 12px;
+          height: 32px;
+          border-radius: 2px;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          position: relative;
+
+          &::before {
+            width: 4px;
+            height: 80%;
+            content: "";
+            background: #f88510;
+            position: absolute;
+            left: 0;
+          }
+        }
+      }
+
+      .pay_method_userConsume {
+        // background: #f4f6f8;
+
+        .pay_method_userConsume_top {
+          font-weight: bold;
+          display: flex;
+          margin-right: 6px;
+          text-align: center;
+          border-bottom: @border-dashed-grey;
+
+          div {
+            flex: 1;
+            div {
+              &:nth-last-child(1) {
+                color: #f88510;
+              }
+            }
+          }
+        }
+
+        .pay_method_userConsume_middle {
+          height: 36px;
+          overflow: auto;
+
+          &::-webkit-scrollbar {
+            width: 5px;
+            background-color: #f5f5f5;
+            border-radius: 5px;
+          }
+          &::-webkit-scrollbar-thumb {
+            width: 5px;
+            background-color: #cbcbcb;
+            border-radius: 5px;
+            box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+          }
+          &::-webkit-scrollbar-track {
+            box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+            border-radius: 10px;
+            background-color: #ebe9e9;
+          }
+
+          .pay_method_userConsume_middle_item {
+            background: #f1f3f5;
+            margin-bottom: 6px;
+            margin-right: 6px;
+            height: 24px;
+            display: flex;
+            text-align: center;
+
+            div {
+              flex: 1;
+            }
+          }
+        }
+
+        .pay_method_userConsume_bottom {
+          margin-top: 6px;
+          border-top: @border-dashed-grey;
+          height: 40px;
+          font-weight: bold;
+          display: flex;
+          justify-content: space-between;
+          text-align: center;
+        }
+
+        .pay_method_userConsume_button {
+          margin-top: 6px;
+          display: flex;
+          justify-content: space-between;
+        }
+      }
+    }
+  }
+
+  .member_pay_right {
+    width: calc(70%);
+    height: 100%;
+    padding: 12px;
+    float: left;
+
+    &::before {
+      content: "";
+      display: block;
+      clear: both;
+    }
+
+    .member_coupon_class_select {
+      background: #f9f9f9;
+    }
+
+    .member_coupon_scoll {
+      height: calc(100% - 32px);
+      margin-right: 12px;
+      padding: 12px;
+      overflow: auto;
+
+      &::-webkit-scrollbar {
+        cursor: pointer;
+        width: 12px;
+        background-color: #f4f6f8;
+        border-radius: 12px;
+        position: absolute;
+        right: 0;
+      }
+      &::-webkit-scrollbar-thumb {
+        cursor: pointer;
+        width: 12px;
+        background-color: #dbdbdb;
+        border-radius: 12px;
+        // box-shadow: inset 0 0 12px #a5d8ff;
+      }
+      &::-webkit-scrollbar-track {
+        cursor: pointer;
+        box-shadow: inset 0 0 6px #f4f6f8;
+        border-radius: 12px;
+        background-color: #f4f6f8;
+      }
+
+      .member_coupon {
+        float: left;
+        width: 180px;
+        height: 280px;
+        margin-right: 12px;
+        margin-bottom: 12px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+        &:hover {
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+        }
+
+        /* 卡券的未使用效果 */
+        .coupon_top {
+          width: 100%;
+          height: 40%;
+          position: relative;
+          background: radial-gradient(
+              circle at top center,
+              transparent 10px,
+              @coupon-default-color 0
+            )
+            top left/180px 100% no-repeat;
+
+          &::after {
+            content: "";
+            position: absolute;
+            height: 4px;
+            width: 100%;
+            left: 0px;
+            bottom: -4px;
+            background-image: linear-gradient(
+                to right,
+                @coupon-default-color 4px,
+                transparent 4px,
+                transparent
+              ),
+              radial-gradient(
+                8px circle at 8px 4px,
+                transparent 4px,
+                @coupon-default-color 4px
+              );
+            background-size: 12px 4px;
+          }
+
+          .coupon_top_top {
+            height: 75%;
+            display: flex;
+            .coupon_top_money_center {
+              text-align: center;
+              margin: auto;
+
+              div {
+                &:first-child {
+                  color: white;
+                  font-size: 16px;
+                  font-weight: bold;
+                }
+
+                &:nth-child(2) {
+                  color: #000000;
+                  span {
+                    &:nth-child(2) {
+                      color: white;
+                    }
+                  }
+                }
+              }
+            }
+          }
+          .coupon_top_cardnum {
+            padding-left: 6px;
+            padding-top: 6px;
+            div {
+              span {
+                &:first-child {
+                  font-weight: bold;
+                }
+              }
+            }
+          }
+        }
+
+        .coupon_middle {
+          height: 35%;
+          padding: 12px;
+        }
+
+        .coupon_bottom {
+          height: 25%;
+          padding: 0 12px;
+
+          .coupon_bottom_time {
+            font-size: 12px;
+            text-align: center;
+          }
+
+          .coupon_bottom_btn {
+            text-align: center;
+            margin-top: 6px;
+          }
+        }
+      }
+
+      /* 会员卡的已经使用的效果 */
+      .member_coupon_active {
+        float: left;
+        width: 180px;
+        height: 280px;
+        margin-right: 12px;
+        margin-bottom: 12px;
+        overflow: hidden;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        position: relative;
+
+        &::after {
+          font-size: 12px;
+          width: 72px;
+          height: 72px;
+          transform: rotate(-45deg);
+          text-align: center;
+          display: flex;
+          justify-content: center;
+          align-items: flex-end;
+          content: "已使用";
+          position: absolute;
+          left: -36px;
+          top: -36px;
+          background: blanchedalmond;
+          color: red;
+        }
+
+        &:hover {
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+        }
+
+        .coupon_top {
+          width: 100%;
+          height: 40%;
+          position: relative;
+          background: @coupon-active-color;
+
+          /* 卡中间的锯齿效果 */
+          &::after {
+            content: "";
+            position: absolute;
+            height: 4px;
+            width: 100%;
+            left: 0px;
+            bottom: -4px;
+            background: linear-gradient(
+                to right,
+                @coupon-active-color 4px,
+                transparent 4px,
+                transparent
+              ),
+              radial-gradient(
+                8px circle at 8px 4px,
+                transparent 4px,
+                @coupon-active-color 4px
+              );
+            background-size: 12px 4px;
+          }
+
+          .coupon_top_top {
+            height: 75%;
+            display: flex;
+
+            .coupon_top_money_center {
+              text-align: center;
+              margin: auto;
+
+              div {
+                &:first-child {
+                  color: white;
+                  font-size: 16px;
+                  font-weight: bold;
+                }
+
+                &:nth-child(2) {
+                  color: #000000;
+                  span {
+                    &:nth-child(2) {
+                      color: white;
+                    }
+                  }
+                }
+              }
+            }
+          }
+
+          .coupon_top_cardnum {
+            padding-left: 6px;
+            padding-top: 6px;
+            div {
+              span {
+                &:first-child {
+                  font-weight: bold;
+                }
+              }
+            }
+          }
+        }
+
+        .coupon_middle {
+          height: 35%;
+          padding: 12px;
+        }
+
+        .coupon_bottom {
+          height: 25%;
+          padding: 0 12px;
+
+          .coupon_bottom_time {
+            font-size: 12px;
+            text-align: center;
+          }
+
+          .coupon_bottom_btn {
+            text-align: center;
+            margin-top: 6px;
+          }
+        }
+      }
+    }
+  }
+}

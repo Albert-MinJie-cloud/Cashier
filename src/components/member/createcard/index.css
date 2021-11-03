@@ -1,0 +1,63 @@
+.createcard {
+  min-width: 960px;
+}
+.createcard .createcard_content .content_center {
+  height: 280px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.createcard .createcard_content .content_center .content_right {
+  height: 100%;
+  padding: 24px;
+  background: white;
+}
+.createcard .createcard_content .content_center .content_right .right_badge {
+  height: 40px;
+  background: #1890ff;
+  border: 1px solid #cdcdcd;
+}
+.createcard .createcard_content .content_center .content_right .right_input {
+  background: #f4f6f8;
+  padding: 12px;
+}
+.createcard .createcard_content .content_center .content_right .phone_error {
+  color: red;
+  margin-top: 6px;
+}
+.createcard .createcard_content .content_center .content_right .phone_error div {
+  margin: 0 12px;
+}
+.createcard .createcard_content .content_center .content_right .right_check_message {
+  margin-top: 12px;
+  overflow: hidden;
+}
+.createcard .createcard_content .content_center .content_right .right_check_message .right_check_message_middle {
+  width: 88px;
+  height: 110px;
+  margin-left: 20%;
+}
+.createcard .createcard_content .content_center .content_right .right_check_message .right_check_message_middle .member_avatar {
+  cursor: pointer;
+  float: left;
+  padding: 12px;
+}
+.createcard .createcard_content .content_center .content_right .right_check_message .right_check_message_middle .member_avatar:nth-last-child(1) {
+  clear: both;
+  content: "";
+  display: block;
+}
+.createcard .createcard_content .content_center .content_right .right_check_message .right_check_message_middle .member_avatar div {
+  text-align: center;
+}
+.createcard .createcard_footer {
+  height: 200px;
+  background: #f4f6f8;
+  padding: 24px 150px;
+}
+.createcard .createcard_footer h3 {
+  font-weight: bold;
+  font-size: 18px;
+}
+.createcard .createcard_footer p {
+  font-size: 16px;
+  line-height: 32px;
+}

@@ -1,0 +1,42 @@
+@menu-color: #333333;
+@length: 10px;
+@background-color: dodgerblue;
+
+
+.menu-container {
+  position: fixed;
+  left: 0;
+  width: 60px;
+  height: calc(100vh);
+  text-align: center;
+  background: @menu-color;
+  padding: calc(100vh * 0.01) 5px;
+
+  .menu-container-item {
+    width: 100%;
+    height: 50px;
+    padding: 10px 0;
+    margin-bottom: 5px;;
+    color: #fff;
+    font-size: 12px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+    cursor: pointer;
+
+    .size{
+      font-size:16px;
+    }
+
+  }
+
+  .num {
+    background-color: @background-color;
+  }
+
+  .item-bottom {
+    position: fixed;
+    bottom: 10px;
+    width: 50px;
+  }
+}
